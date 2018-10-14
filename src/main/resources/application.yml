@@ -1,0 +1,15 @@
+zuul:
+  prefix: /api/kestraa
+  routes:
+    crud:
+      path: /db/**
+      service-id: crud-service-mysql
+    test:
+      path: /redirect/**
+      url: http://google.com
+    file:
+      path: /documents/name/**
+      service-id: student-service
+    upload:
+      path: /documents/comunicados/**
+      service-id: comunicado
