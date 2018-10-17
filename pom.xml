@@ -48,11 +48,15 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- Discovery registry or Eureka -->
 		<dependency>
-			<groupId>io.pivotal.spring.cloud</groupId>
-			<artifactId>spring-cloud-services-starter-service-registry</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<!-- Discovery registry or Eureka -->
+		<!-- <dependency> -->
+		<!-- <groupId>io.pivotal.spring.cloud</groupId> -->
+		<!-- <artifactId>spring-cloud-services-starter-service-registry</artifactId> -->
+		<!-- </dependency> -->
 		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -68,13 +72,13 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>io.pivotal.spring.cloud</groupId>
-				<artifactId>spring-cloud-services-dependencies</artifactId>
-				<version>2.0.1.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
+<!-- 			<dependency> -->
+<!-- 				<groupId>io.pivotal.spring.cloud</groupId> -->
+<!-- 				<artifactId>spring-cloud-services-dependencies</artifactId> -->
+<!-- 				<version>2.0.1.RELEASE</version> -->
+<!-- 				<type>pom</type> -->
+<!-- 				<scope>import</scope> -->
+<!-- 			</dependency> -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
