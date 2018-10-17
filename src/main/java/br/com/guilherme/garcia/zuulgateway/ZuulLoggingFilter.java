@@ -25,6 +25,7 @@ public class ZuulLoggingFilter extends ZuulFilter {
 				RequestContext.getCurrentContext().getRequest();
 		logger.info("request -> {} request uri -> {}", 
 				request, request.getRequestURI());
+		logger.info("Filtro do API GATEWAY");
 		return null;
 	}
 

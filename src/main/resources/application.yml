@@ -1,15 +1,28 @@
+server:
+  port: 8765
+  
+spring:
+  application:
+    name: zuul-gateway  
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+      
+ribbon:
+  eureka:
+    enabled: true
+      
 zuul:
   prefix: /api/kestraa
   routes:
     crud:
       path: /db/**
       service-id: crud-service-mysql
-    test:
-      path: /redirect/**
-      url: http://google.com
     file:
       path: /documents/name/**
       service-id: student-service
     upload:
       path: /documents/comunicados/**
-      service-id: comunicado
+      service-id: comunicado-service
