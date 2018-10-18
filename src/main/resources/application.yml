@@ -1,5 +1,6 @@
+#Random port
 server:
-  port: 8765
+  port: 0
   
 spring:
   application:
@@ -15,14 +16,17 @@ ribbon:
     enabled: true
       
 zuul:
-  prefix: /api/kestraa
+  prefix: /api/school
   routes:
     crud:
       path: /db/**
-      service-id: crud-service-mysql
-    file:
-      path: /documents/name/**
+      service-id: crud-service
+    student:
+      path: /student/**
       service-id: student-service
-    upload:
-      path: /documents/comunicados/**
+    comunicado:
+      path: /comunicado/**
       service-id: comunicado-service
+    financial:
+      path: /financial/**
+      service-id: financial-service
